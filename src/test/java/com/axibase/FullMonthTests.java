@@ -2,7 +2,6 @@ package com.axibase;
 
 import com.axibase.date.DatetimeProcessor;
 import com.axibase.date.PatternResolver;
-import lombok.RequiredArgsConstructor;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -53,7 +52,6 @@ public class FullMonthTests {
         assertThat(assertion.description, shortMonthFormatter.canParse(input), is(assertion.expectedResult));
     }
 
-    @RequiredArgsConstructor
     private enum FullMonthAssertion {
         CAN_PARSE_FULL_MONTH("Should be able to parse full month with full month parser", true),
         CANNOT_PARSE_SHORT_MONTH("Should be able to parse short month with full month parser", false),
@@ -61,5 +59,10 @@ public class FullMonthTests {
 
         private final String description;
         private final boolean expectedResult;
+
+        FullMonthAssertion(String description, boolean expectedResult) {
+            this.description = description;
+            this.expectedResult = expectedResult;
+        }
     }
 }
