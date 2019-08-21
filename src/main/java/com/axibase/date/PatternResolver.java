@@ -8,9 +8,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * This class performs caching of java.time.format.DateTimeFormatter objects, like it's done in joda.time and Apache Commons.
- * Parsing a pattern is a heavy operation, so such a cache should improve performance several times. Spring caching is used
- * in order to allow configuring its parameters via UI.
+ * This class resolves creates for Axibase-supported datetime syntax. Each DatetimeProcessor object is immutable,
+ * so consider caching them for better performance in client application.
  */
 public class PatternResolver {
     private static final Pattern OPTIMIZED_PATTERN = Pattern.compile("yyyy-MM-dd('T'|T| )HH:mm:ss(\\.S[S]{0,8})?(Z{1,2}|'Z'|XXX)?");
