@@ -6,7 +6,20 @@
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>date-formatter</name>
-  <url>http://maven.apache.org</url>
+  <description>Library for manipulating timestamps using Axibase datetime syntax</description>
+  <url>https://axibase.com/docs/atsd/shared/time-pattern.html#date-and-time-patterns</url>
+  <inceptionYear>2019</inceptionYear>
+  <organization>
+    <name>Axibase</name>
+    <url>https://axibase.com</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
