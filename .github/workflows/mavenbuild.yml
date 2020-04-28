@@ -7,7 +7,7 @@ on:
  [push]
 jobs:
   build:
-    container: openjdk:13
+    container: adoptopenjdk/maven-openjdk13
       
     runs-on: ubuntu-latest
 
