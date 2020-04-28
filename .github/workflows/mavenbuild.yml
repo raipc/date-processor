@@ -7,11 +7,13 @@ on:
  [push]
 jobs:
   build:
-    container: adoptopenjdk/maven-openjdk13
+    container: openjdk:13
       
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install maven
+      run: apt install -y --no-install-recommends maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
